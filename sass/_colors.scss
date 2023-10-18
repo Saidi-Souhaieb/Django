@@ -1,0 +1,20 @@
+@each $key, $value in $colors{
+  @debug $key;
+  .#{$key}{
+    color: $value;
+  }
+}
+
+@each $key, $value in $colors{
+  @debug $key;
+  .bg-#{$key}{
+    background-color: $value;
+  }
+}
+
+@each $key, $value in $colors{
+  @debug $key;
+  .br-#{$key}{
+    border-color: $value;
+  }
+}

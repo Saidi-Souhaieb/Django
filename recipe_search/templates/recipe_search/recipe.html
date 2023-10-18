@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static%}
+
+{% block title %}{% endblock title %}
+{% block cssfiles %} <link rel="stylesheet" href="{% static 'recipe_search/recipe.css' %}"> {% endblock cssfiles %}
+{% block content %}
+  <div class="container">
+    <main class="pt-2 display-f pb-5 mt-5 mb-1">
+      <h1># {{ recipe.topic }}</h1>
+      <div class="recipe-information">
+
+      <h1  class="font-xl display-f justify-center">{{ recipe.title }}</h1>
+      <div class="stats display-f">
+        <div class="green-stats display-f justify-center">
+        <div class="calories display-f pr-1 justify-center align-center">
+          calories
+          <div class="amount bg-green  br-lg">{{ recipe.calories }} </div>
+        </div>
+        <div class="carbs display-f pr-1 justify-center align-center">
+          Carbs
+          <div class="amount bg-green  br-lg">{{ recipe.carbs }}</div>
+        </div>
+        <div class="fat display-f pr-1  justify-center align-center">
+          Fat
+          <div class="amount bg-green  br-lg">{{ recipe.fat }}</div>
+        </div>
+        <div class="protein display-f pr-1  justify-center align-center">
+          Protein
+          <div class="amount bg-green  br-lg ">{{ recipe.protein }}</div>
+        </div>
+      </div>
+        <hr class="bg-gray">
+        <div class="red-stats display-f justify-center">
+        <div class="prep display-f pr-1 justify-center align-center">
+          Prep
+          <div class="amount-2 bg-red mb-1 ">
+             {{ recipe.time }}mins
+          </div>
+        </div>
+        <div class="serving display-f pr-1 justify-center align-center">
+          Servings:
+          <div class="amount-2 bg-red  ">
+            {{ recipe.servings }}
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="description">
+        {{ recipe.description }}
+      </div>
+      <div class="cards display-f gap-2 justify-center align-flex-start">
+      <div class="card bg-gray pt-1 pb-2 pr-1 pl-1">
+        <h2 class="font-xl mb-1">Ingredients</h2>
+        <div class="card-description">
+          {{ recipe.description }}
+        </div>
+      </div>
+      <div class="card bg-gray pt-1 pb-3 pr-1 pl-1">
+        <h2 class="font-xl mb-1">Directions</h2>
+        <div class="card-description">
+          {{ recipe.directions }}
+        </div>
+      </div>
+    </div>
+    <div class="share-post mt-3 display-f align-center gap-1  ">
+      <span class="font-xl">Share this post:</span>
+      <div class="social-logos display-f gap-1">
+      <div class="facebook bg-blue white">Facebook</div>
+      <div class="twitter bg-cyan white">Twitter</div>
+      <div class="google bg-googlered white">Google+</div>
+    </div>
+    <hr class="gray">
+    </div>
+  </div>
+    </main>
+    <div class="back-home">
+    <a href="{% url "index" %}" class="secondary display-f justify-center bg-white pt-1 pb-2">Back Home</a>
+  </div>
+  </div>
+{% endblock content %}

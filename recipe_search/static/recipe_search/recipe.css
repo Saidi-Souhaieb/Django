@@ -1,0 +1,51 @@
+
+
+
+
+
+
+
+main {
+  background-color: #ffffff;
+  width: 95%;
+  height: 32rem;
+  margin: 0 auto;
+  box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main .recipe-information {
+  margin: 0 auto;
+  width: 60%;
+}
+main .stats {
+  flex-direction: column;
+}
+main .green-stats {
+  margin-bottom: 1rem;
+}
+main .amount {
+  padding: 1.2rem;
+}
+main .amount-2 {
+  padding: 1.2rem;
+}
+main .cards .card {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+}
+main .share-post {
+  flex-direction: column;
+}
+main .share-post .facebook {
+  padding: 0.5rem 1rem;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+}
+main .share-post .twitter {
+  padding: 0.5rem 1rem;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+}
+main .share-post .google {
+  padding: 0.5rem 1rem;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+}
+

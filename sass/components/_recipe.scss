@@ -1,0 +1,50 @@
+
+main{
+  background-color: #ffffff;
+  width: 95%;
+  height: 32rem;
+  margin: 0 auto;
+  box-shadow: $base-box-shadow;
+  flex-direction: column;
+  gap: 0.5rem;
+  .recipe-information{
+    margin: 0 auto;
+    width: 60%;
+  }
+  .stats{
+    flex-direction: column;
+  }
+  .green-stats{
+    margin-bottom: 1rem;
+  }
+  .amount{
+    padding: 1.2rem;
+  }
+  .amount-2{
+    padding: 1.2rem;
+  }
+  .cards{
+    .card{
+      box-shadow: $base-box-shadow;
+    }
+    .card-
+    .card-description{
+      line-height: 1.5rem;
+    }
+  }
+  .share-post{
+    flex-direction: column;
+    .facebook{
+      padding: 0.5rem 1rem;
+      box-shadow: $base-box-shadow;
+    }
+    .twitter{
+      padding: 0.5rem 1rem;
+      box-shadow: $base-box-shadow;
+    }
+    .google{
+      padding: 0.5rem 1rem;
+      box-shadow: $base-box-shadow;
+    }
+  }
+}

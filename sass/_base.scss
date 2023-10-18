@@ -1,0 +1,14 @@
+body{
+  background-image: url(../sass/img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+}
+.container{
+  width: 100%;
+  max-width: 130rem;
+}
+*{
+  margin: 0;
+  padding: 0;
+}

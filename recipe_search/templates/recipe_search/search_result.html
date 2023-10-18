@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% load static %}
+<!-- {% static 'recipe_search/search_result.css' %} -->
+<!DOCTYPE html>
+
+  {% block title %}Search Result{% endblock title %}
+  {% block cssfiles %} <link rel="stylesheet" href="{% static 'recipe_search/search_result.css' %}"> {% endblock cssfiles %}
+{% block content %}
+  <div class="container">
+    <div class="number-result bg-white font-xl br-sm ">
+      {{ count }} Result(s) Found
+    </div>
+    <div class="result-found bg-white">
+      <div class="result-cards pt-3">
+        
+       {% for r in recipe  %}
+        {% include "recipe_search/include/single_search.html" %}
+       {% endfor %}
+       
+      </div>
+      <br>
+       <div>
+        
+      </div>
+      <div class="pagination">   
+      {% if recipe.has_previous %}
+          <a href="?page=1" class="red">&laquo First </a>
+          <a href="?page={{ recipe.previous_page_number }}" class="red">{{ recipe.previous_page_number }}</a>
+      {% endif %}
+          <a href="?page={{ recipe.number }}" class="red">{{ recipe.number }}</a>
+      {% if recipe.has_next %}
+          <a href="?page={{ recipe.next_page_number }}" class="red">{{ recipe.next_page_number }}</a>
+          <a href="?page={{ recipe.paginator.num_pages }}" class="red"> Last &raquo </a>
+      {% endif %} 
+    </div>
+  </div>
+</div>
+  </div>
+  {% endblock content %}

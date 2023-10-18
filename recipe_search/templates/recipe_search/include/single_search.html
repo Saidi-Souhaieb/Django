@@ -1,0 +1,32 @@
+{% comment %} <div class="result-card br-sm">
+  <div class="card-image ">
+    <img src="{{ r.image.url }}" class="br-sm">
+  </div>
+  <div class="result-card-info">
+    <div class="result-card-title font-lg">
+       {{ r.title }}
+    </div>
+    <div class="result-card-description gray">
+      {{ r.description }}
+    </div>
+      <div class="read-more secondary font-lg">
+       <a href="{% url "single_search" r.title %}" class="secondary">ReadMore ></a>
+      </div>
+  </div>
+</div> {% endcomment %}
+
+<div class="result-card">
+  <div class="card-image">
+    <img src="{{ r.image.url }}" alt="" class="br-sm">
+  </div>
+  <div class="result-card-info">
+    <div class="result-card-title font-lg">
+    {{ r.title }}
+  </div>
+    <div class="result-card-description gray">
+      {{ r.description }}
+    </div>
+    <a href="{% url "single_search" r.title %}" class="secondary font-lg">Read More</a>
+  </div>
+  
+</div>
